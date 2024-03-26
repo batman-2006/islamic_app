@@ -4,6 +4,7 @@ import 'package:islamic_app/screens/radio.dart';
 import 'package:timer_count_down/timer_count_down.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'splash_screen.dart';
+import 'quibla.dart';
 class MainScreen extends StatefulWidget {
 
   @override
@@ -44,34 +45,59 @@ class _MainScreenState extends State<MainScreen> {
           animationDuration: const Duration(milliseconds: 300),
           items: [
 
-            Icon(
-              Icons.book,
-              size: 35.0,
-              color: Colors.white,
+            Tooltip(
+              message: "تعليم القرأن",
+
+              child: Icon(
+                Icons.book,
+                size: 35.0,
+                color: Colors.white,
+              ),
             ),
-            Icon(
-              Icons.mosque,
-              size: 35.0,
-              color: Colors.white,
+
+            Tooltip(
+              message: "أوقات الصلاة و القبلة",
+              child: Icon(
+                Icons.mosque,
+                size: 35.0,
+                color: Colors.white,
+              ),
             ),
-            Icon(
-              Icons.home_filled,
-              size: 40.0,
-              color: Colors.white,
+            Tooltip(
+              message: "الصفخة الرئيسية",
+
+              child: Icon(
+                Icons.home_filled,
+                size: 40.0,
+                color: Colors.white,
+              ),
             ),
-            Icon(
-              Icons.face,
-              size: 35.0,
-              color: Colors.white,
+            Tooltip(
+              message: "تعليم الأطفال",
+              child: Icon(
+                Icons.face,
+                size: 35.0,
+                color: Colors.white,
+              ),
             ),
-            Icon(
-              Icons.radio,
-              size: 35.0,
-              color: Colors.white,
+            Tooltip(
+              message: "إذاعة القرأن الكريم",
+              child: Icon(
+                Icons.radio,
+                size: 35.0,
+                color: Colors.white,
+              ),
             ),
           ],
           onTap: (index){
-            if(index == 4) {
+            if(index == 1) {
+              setState(() {
+                curr = Quiblah();
+                title = "  القبلة الإللكتؤونية";
+              });
+
+            }
+            else if(index == 4) {
               setState(() {
                 curr = radio();
                 title = "إذاعة القرأن الكريم";
