@@ -194,7 +194,7 @@ class home extends StatelessWidget {
                       ),
                     )),
                 Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: const EdgeInsets.all(2.0),
                   child: TextButton(
                     onPressed: (){
                       Navigator.of(context).push(MaterialPageRoute(builder:
@@ -202,7 +202,7 @@ class home extends StatelessWidget {
                       ));
                     },
                     child: Container(
-                      width: 150.0,
+                      width: 145.0,
                       height: 150.0,
                       decoration: BoxDecoration(
                           color: Color.fromRGBO(12, 167, 137, 1),
@@ -222,7 +222,7 @@ class home extends StatelessWidget {
                           Text(
                             "السبحة الإلكترونية",
                             style: TextStyle(
-                                fontSize: 20.0,
+                                fontSize: 19.0,
                                 color: Colors.white,
                                 fontWeight: FontWeight.bold),
                           )

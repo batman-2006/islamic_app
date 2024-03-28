@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:islamic_app/screens/Azkaar.dart';
 
 class Azkaar_main extends StatefulWidget {
   const Azkaar_main({super.key});
@@ -55,40 +56,47 @@ class _Azkaar_mainState extends State<Azkaar_main> {
               ],
             )),
           ),
-          Padding(
-            padding: const EdgeInsets.all(10.0),
-            child: Center(
-                child: Column(
-                  children: [
-                    Container(
-                      width: 240.0,
-                      height: 200.0,
-                      decoration: BoxDecoration(
-                        border: Border.all(
+          TextButton(
+            onPressed: (){
+              Navigator.of(context).push(MaterialPageRoute(builder:
+                  (context)=> Azkaar()
+              ));
+            },
+            child: Padding(
+              padding:  EdgeInsets.all(10.0),
+              child: Center(
+                  child: Column(
+                    children: [
+                      Container(
+                        width: 240.0,
+                        height: 200.0,
+                        decoration: BoxDecoration(
+                          border: Border.all(
+                            color: Color.fromRGBO(12, 167, 137, 1),
+                            //width: 2.0,
+                          ),
                           color: Color.fromRGBO(12, 167, 137, 1),
-                          //width: 2.0,
+                          shape: BoxShape.circle,
                         ),
-                        color: Color.fromRGBO(12, 167, 137, 1),
-                        shape: BoxShape.circle,
-                      ),
-                      child: Padding(
-                        padding: const EdgeInsets.all(25.0),
-                        child: Image(
-                          image: AssetImage("assets/images/icon1.png"),
-                          width: 20.0,
+                        child: Padding(
+                          padding:  EdgeInsets.all(25.0),
+                          child: Image(
+                            image: AssetImage("assets/images/icon1.png"),
+                            width: 20.0,
+                          ),
                         ),
                       ),
-                    ),
-                    SizedBox(
-                      height: 20.0,
-                    ),
-                    Text("ادعية",
-                      style: TextStyle(
-                        fontSize: 25.0,
+                      SizedBox(
+                        height: 20.0,
                       ),
-                    )
-                  ],
-                )),
+                      Text("ادعية",
+                        style: TextStyle(
+                          fontSize: 25.0,
+                        ),
+                      )
+                    ],
+                  )),
+            ),
           ),
 
         ],
