@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:islamic_app/screens/tasbeeh.dart';
 import 'package:timer_count_down/timer_count_down.dart';
 
+import 'Azkaar_main.dart';
+
 class home extends StatelessWidget {
   int time = 4*3600;
 
@@ -157,31 +159,38 @@ class home extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Container(
-                      width: 150.0,
-                      height: 150.0,
-                      decoration: BoxDecoration(
-                          color: Color.fromRGBO(12, 167, 137, 1),
-                          borderRadius:
-                          BorderRadius.all(Radius.circular(20.0))),
-                      child: Column(
-                        children: [
-                          SizedBox(
-                            height: 5.0,
-                          ),
-                          Image(
-                            image: AssetImage("assets/images/icon1.png"),
-                            width: 109.0,
-                          ),
-                          Text(
-                            "أذكار و أدعية",
-                            style: TextStyle(
-                                fontSize: 20.0,
-                                color: Colors.white,
-                                fontWeight: FontWeight.bold),
-                          )
-                        ],
+                    padding: const EdgeInsets.all(5.0),
+                    child: TextButton(
+                      onPressed: (){
+                        Navigator.of(context).push(MaterialPageRoute(builder:
+                            (context)=> Azkaar_main()
+                        ));
+                      },
+                      child: Container(
+                        width: 150.0,
+                        height: 150.0,
+                        decoration: BoxDecoration(
+                            color: Color.fromRGBO(12, 167, 137, 1),
+                            borderRadius:
+                            BorderRadius.all(Radius.circular(20.0))),
+                        child: Column(
+                          children: [
+                            SizedBox(
+                              height: 5.0,
+                            ),
+                            Image(
+                              image: AssetImage("assets/images/icon1.png"),
+                              width: 109.0,
+                            ),
+                            Text(
+                              "أذكار و أدعية",
+                              style: TextStyle(
+                                  fontSize: 20.0,
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold),
+                            )
+                          ],
+                        ),
                       ),
                     )),
                 Padding(
